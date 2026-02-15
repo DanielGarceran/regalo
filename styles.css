@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Inicio */
+#inicio {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #000, #1a1a40);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 30px;
+    border: none;
+    background-color: gold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: transform 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Universo */
+#universo {
+    width: 100%;
+    height: 100vh;
+    background: black;
+    position: relative;
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Estrellas */
+#estrellas {
+    width: 100%;
+    height: 100%;
+    background: url("https://i.pinimg.com/736x/b5/2e/6e/b52e6edc9350c98038802520027e9e5f.jpg");
+    animation: moverEstrellas 60s linear infinite;
+    position: absolute;
+}
+
+@keyframes moverEstrellas {
+    from { background-position: 0 0; }
+    to { background-position: 10000px 10000px; }
+}
+
+/* Contenido */
+#contenido {
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    color: rgb(228, 11, 214);
+}
+
+#texto {
+    font-size: 60px;
+    text-shadow: 0 0 20px rgb(238, 0, 255);
+    margin-bottom: 30px;
+}
+
+/* Flores */
+.flor {
+    position: absolute;
+    font-size: 30px;
+    animation: flotar 6s infinite ease-in-out;
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-200px); opacity: 0; }
+}
+
+/* Respuesta */
+#respuesta {
+    font-size: 30px;
+    margin-top: 20px;
+    color: rgb(223, 62, 180);
+}
